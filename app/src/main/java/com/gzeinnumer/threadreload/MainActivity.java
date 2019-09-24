@@ -7,6 +7,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
+    //for status if screen not in activity
     public static boolean isOpen = false;
 
     @Override
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        isOpen =true;
         reloadOtomatis();
     }
 
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                             refreshData();
                         }
                     });
-                }catch (InterruptedException ignored){
+                }catch (InterruptedException e){
 
                 }
             }
